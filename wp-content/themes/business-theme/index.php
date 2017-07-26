@@ -19,13 +19,23 @@
 
 <div class="header clearfix">
     <div class="container">
-        <nav>
-            <ul class="nav nav-pills pull-right">
-                <li role="presentation" class="active"><a href="index.html">Home</a></li>
-                <li role="presentation"><a href="about.html">About</a></li>
-                <li role="presentation"><a href="blog.html">Blog</a></li>
-            </ul>
-        </nav>
+            <?php
+                wp_nav_menu(array(
+                    'theme_location' => 'primary',
+                    'depth' => 2,
+                    'container' => false,
+                    'menu_class' => 'nav nav-pills pull-right',
+                    'fallback' => 'wp_bootstrap_navwalker::fallback',
+                    'walker' => new wp_bootstrap_navwalker()
+                ));
+            ?>
+<!--        <nav>-->
+<!--            <ul class="nav nav-pills pull-right">-->
+<!--                <li role="presentation" class="active"><a href="index.html">Home</a></li>-->
+<!--                <li role="presentation"><a href="about.html">About</a></li>-->
+<!--                <li role="presentation"><a href="blog.html">Blog</a></li>-->
+<!--            </ul>-->
+<!--        </nav>-->
         <img src="img/logo.png" alt="Company Logo">
     </div>
 </div>
