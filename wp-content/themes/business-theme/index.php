@@ -29,14 +29,11 @@
                     'walker' => new wp_bootstrap_navwalker()
                 ));
             ?>
-<!--        <nav>-->
-<!--            <ul class="nav nav-pills pull-right">-->
-<!--                <li role="presentation" class="active"><a href="index.html">Home</a></li>-->
-<!--                <li role="presentation"><a href="about.html">About</a></li>-->
-<!--                <li role="presentation"><a href="blog.html">Blog</a></li>-->
-<!--            </ul>-->
-<!--        </nav>-->
-        <img src="img/logo.png" alt="Company Logo">
+        <?php if(has_custom_logo()) : ?>
+                <?php the_custom_logo(); ?>
+        <?php else : ?>
+                <h1><?php bloginfo('name'); ?></h1>
+        <?php endif; ?>
     </div>
 </div>
 
