@@ -50,6 +50,7 @@
                         <div class="clr"></div>
                     <?php endwhile; ?>
                 <?php endif; ?>
+                <?php comments_template(); ?>
             </div>
             <?php if(is_active_sidebar('sidebar')) : ?>
                 <div class="col-md-4">
